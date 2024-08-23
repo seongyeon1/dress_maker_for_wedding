@@ -45,12 +45,12 @@ Image Generation :
 ### 사용법
 1. terminal에서 보고 싶을 때
 ```bash
-    make run-terminal
+make run-terminal
 ```
 
 2. fastapi
 ```bash
-    make all
+make all
 ```
 - http://0.0.0.0:8000 에서 실행
 
@@ -93,12 +93,13 @@ Response body
 ├── Makefile
 ├── requirements.txt
 ├── run.sh
-├── config.py
-├── main.py
 ├── app
 │   ├── __init__.py
+│   ├── app.py
 │   ├── main.py
 │   └── services
+│       ├── conf.py
+│       ├── templates.py
 │       ├── dress_generation.py
 │       └── dialogue_extraction.py
 └── .env
