@@ -25,22 +25,41 @@ input :
 신부 : 빌라드지디 청담으로 잡았어요.
 실장 : 빌라드지디가 밝은 홀이라 레이스 없이 깔끔한 이런 디자인이 잘 어울려요. 식장이랑도 잘 어울리겠네요.
 ```
+
+#### keyword
 output :
 ```text
-Prompt:
-Create a detailed illustration of a bride wearing an elegant Jamie Bridal gown made of off-shoulder, sleeveless, and slightly slimmer A-line silhouette with a pure feminine style.
-The dress should be made of a luxurious and opulent Mikado silk fabric with a slight ivory tone and a subtle sheen.
-The dress should have a high-quality, well-crafted look, with intricate details such as delicate beading and embroidery.
-The bride should have a natural, glowing makeup look, with her hair styled in a sophisticated updo.
-The background should be a lush garden setting with vibrant greenery and flowers, with a soft, natural lighting effect.
-The overall mood of the illustration should be romantic, elegant, and timeless.
+{
+  '기본 정보': {
+    '스타일': '클래식',
+    '원단': '미카도 실크',
+    '색상': '아이보리'
+  },
+  '상세한 디자인': {
+    '실루엣': 'A라인',
+    '넥라인': '오프숄더',
+    '소매': '없음',
+    '트레인': '미기재',
+    '디테일': '비즈 장식'
+  },
+  '설명': '아이보리 색상의 미카도 실크로 만들어진 클래식한 디자인의 드레스입니다. A라인 실루엣으로 슬림한 핏을 연출하며, 오프숄더 네크라인으로 팔을 가리는 효과를 줍니다. 소매는 없으며, 트레인은 언급되지 않았습니다. 비즈 장식이 전체적으로 촘촘히 박혀있어 화려하고 고급스러운 느낌을 줍니다.'
+}
 ```
+아래 페이지에 사용할 정보가 됨
 
-Image Generation :
-![image](https://github.com/user-attachments/assets/438cd7ce-eadd-48c5-80d5-a1354abaa195)
+### 이미지 생성
+1. 이미지 생성의 input으로 넣을 prompt 생성 : 
+input : 전체 대화
+output :
+```text
+A front view of a bridal dress in a slightly ivory tone with a glossy mikado silk texture. The dress features an off-shoulder design with a slightly slimmer A-line shape that falls gracefully to the floor. The dress has a fitted bodice with a cinched waist, accentuating the bride's figure. The skirt is full and flared, with a small train at the back. The dress has a simple, elegant design, with a subtle pattern of small, 촘촘히 박혀있는 비즈. The dress is paired with a veil that is held up by a headpiece, adding a touch of elegance to the overall look. No human figure included. Sketch style, black and white line art.
+```
+2. 프롬프트(위의 output)를 바탕으로 이미지 생성
+결과 :
+![img](https://fal.media/files/lion/VxlsjwZ0g1iw8Q-YKFN-C.png)
+
 
 ### Setup
-
 
 ### 사용법
 1. terminal에서 보고 싶을 때
@@ -102,5 +121,9 @@ Response body
 │       ├── templates.py
 │       ├── dress_generation.py
 │       └── dialogue_extraction.py
+│ 
+├── test : 테스트 파일이 있습니다
+│   └── make_dress_demo files...
 └── .env
+
 ```

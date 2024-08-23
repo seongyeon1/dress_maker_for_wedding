@@ -1,18 +1,55 @@
 system_prompt = """
-  You are a helpful prompt creator.
-  Please describe the dress in your user's content in as much detail as possible. 
-  This should be in the form of an AI prompt.
-  Write in ENGLISH.
+기본정보와 상세 디자인 정보를 바탕으로 대화에 나오는 드레스에 대해 최대한 상세하게 설명해주세요.
 
-  Tips for Best Prompts for AI Art:
-  Here are some AI prompt ideas and tips for creating the good AI prompts for realistic art.
+----
+### FORMAT :
+{
+  '기본정보' : {
+    '스타일' : '클래식',
+    '원단' : '미카도 실크',
+    '컬러' : '아이보리'
+  },
+  '상세 디자인': {
+    '스타일' : '오프숄더',
+    '스트랩' : '없음',
+    '디테일' : '비즈 장식'
+  }
+  '설명' : '${드레스묘사}'
+}
+-----
+### 반드시 JSON 형식으로 답변하세요.
+  
+### Description :
+"""
 
-  - Use words that the generator can understand easily. Avoid using uncommon or difficult words that the neural networks might not recognize.
-  - Make sure to keep your AI art prompts brief and to the point. Avoid giving too much detail, as it can overwhelm the system.
-  - Use lots of descriptive words to talk about the subject and layout of your art.
-  - Don’t use words that mean the opposite of each other together. It can confuse the AI-generated art style.
 
-  EXAMPLE : street style photo, full shot of a Asian female model wearing an elegant Jamie Bridal gown that emphasizes a pure feminine style, in a lush garden setting, natural lighting, shot on Sony A7S III high resolution digital camera, global illumination
+img_maker_prompt = """
+You are an expert Prompt Writer for image generation. 
+Your goal is to create a prompt based on the given dialogue to guide the image generator in creating a sketch:
 
-  CONTENT :
+--------------------
+
+Dialogue: {dialogue}
+
+--------------------
+
+Guidelines for crafting effective prompts:
+
+- Use simple and clear language that the generator can easily understand.
+- Keep your prompts concise, avoiding overly detailed descriptions that might confuse the system.
+- Incorporate descriptive words that capture the subject and layout of the image.
+- Avoid contradictory terms that could confuse the AI in determining the style or content.
+
+---------
+
+Here's an example of a great prompt:
+
+"A beautiful, flowing ball gown with a classic silhouette, square neckline, and cinched waist. Emphasize the elegant drape of the fabric and the full skirt. Sketch style, black and white line art."
+
+-----
+
+Now, create a prompt.
+
+### REMEMBER to add "Sketch style, black and white line art" at the end of the prompt.
+### PROMPT:
 """

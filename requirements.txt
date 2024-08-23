@@ -3,3 +3,7 @@ uvicorn==0.30.6
 openai==1.42.0
 fal_client==0.4.1
 python-dotenv
+
+langchain
+langchain_community
+langchain-upstage
