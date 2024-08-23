@@ -11,7 +11,8 @@
 ### Example
 llm model (`solar`)
 
-input :
+#### input :
+
 ```text
 이 대화를 바탕으로 드레스의 이미지를 묘사해줘
 <드레스 착용 전>
@@ -27,8 +28,7 @@ input :
 ```
 
 #### keyword
-<br>
-output :
+
 ```text
 {
   '기본 정보': {
@@ -46,12 +46,15 @@ output :
   '설명': '아이보리 색상의 미카도 실크로 만들어진 클래식한 디자인의 드레스입니다. A라인 실루엣으로 슬림한 핏을 연출하며, 오프숄더 네크라인으로 팔을 가리는 효과를 줍니다. 소매는 없으며, 트레인은 언급되지 않았습니다. 비즈 장식이 전체적으로 촘촘히 박혀있어 화려하고 고급스러운 느낌을 줍니다.'
 }
 ```
+
 <br>
 아래 페이지에 사용할 정보가 됨
 
+
 ### 이미지 생성
-<br>
-1. 이미지 생성의 input으로 넣을 prompt 생성 : <br>
+</br>
+
+#### 1. 이미지 생성의 input으로 넣을 prompt 생성 : <br>
 - input : 전체 대화<br>
 - output :<br>
 
@@ -59,7 +62,7 @@ output :
 A front view of a bridal dress in a slightly ivory tone with a glossy mikado silk texture. The dress features an off-shoulder design with a slightly slimmer A-line shape that falls gracefully to the floor. The dress has a fitted bodice with a cinched waist, accentuating the bride's figure. The skirt is full and flared, with a small train at the back. The dress has a simple, elegant design, with a subtle pattern of small, 촘촘히 박혀있는 비즈. The dress is paired with a veil that is held up by a headpiece, adding a touch of elegance to the overall look. No human figure included. Sketch style, black and white line art.
 ```
 
-2. 프롬프트(위의 output)를 바탕으로 이미지 생성<br>
+#### 2. 프롬프트(위의 output)를 바탕으로 이미지 생성<br>
 - 결과 :
 ![img](https://fal.media/files/lion/VxlsjwZ0g1iw8Q-YKFN-C.png)
 
