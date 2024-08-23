@@ -38,3 +38,68 @@ The overall mood of the illustration should be romantic, elegant, and timeless.
 
 Image Generation :
 ![image](https://github.com/user-attachments/assets/438cd7ce-eadd-48c5-80d5-a1354abaa195)
+
+### Setup
+
+
+### 사용법
+1. terminal에서 보고 싶을 때
+```bash
+    make run-terminal
+```
+
+2. fastapi
+```bash
+    make all
+```
+- http://0.0.0.0:8000 에서 실행
+
+```bash
+curl -X 'POST' \
+  'http://localhost:8000/generate-dress/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "dialogue": "대화 내용"
+}'
+```
+Response body
+```bash
+{
+  "images": [
+    {
+      "url": "url",
+      "width": 1024,
+      "height": 768,
+      "content_type": "image/jpeg"
+    }
+  ],
+  "timings": {
+    "inference": 2.1728938709711656
+  },
+  "seed": 207009889,
+  "has_nsfw_concepts": [
+    false
+  ],
+  "prompt": "프롬프트 결과"
+}
+```
+
+
+### directory
+```
+.
+├── Dockerfile
+├── Makefile
+├── requirements.txt
+├── run.sh
+├── config.py
+├── main.py
+├── app
+│   ├── __init__.py
+│   ├── main.py
+│   └── services
+│       ├── dress_generation.py
+│       └── dialogue_extraction.py
+└── .env
+```
