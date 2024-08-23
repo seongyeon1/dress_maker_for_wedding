@@ -7,6 +7,8 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
+from templates import *
+
 load_dotenv()
 
 UPSTAGE_API_KEY = os.getenv('UPSTAGE_API_KEY')
@@ -16,7 +18,6 @@ client = OpenAI(
     base_url="https://api.upstage.ai/v1/solar"
 )
 
-from templates import *
 
 def extract_dress_info(dialogue):
     response = client.chat.completions.create(
@@ -32,7 +33,7 @@ def extract_dress_info(dialogue):
 
 
 def make_prompt(dialogue):
-    template = make_img_prompt
+    template = img_maker_prompt
     prompt_template = PromptTemplate(input_variables=["dialogue"], template=template)
     chain = LLMChain(prompt=prompt_template, llm=OpenAI(model="solar-1-mini-chat"))
     response = chain.run(dialogue=dialogue)
