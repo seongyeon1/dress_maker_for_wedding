@@ -50,7 +50,7 @@ llm model (`solar`)
 <br>
 아래 페이지에 사용할 정보가 됨
 
-![keyword](https://github.com/user-attachments/assets/728a994c-8d26-4c5a-b354-833ad08e8e69)
+![keyword](https://github.com/user-attachments/assets/728a994c-8d26-4c5a-b354-833ad08e8e69 =200x400)
 
 
 ### 이미지 생성
