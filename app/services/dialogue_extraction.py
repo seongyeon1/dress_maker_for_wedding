@@ -1,13 +1,10 @@
 # services/dialogue_extraction.py
-from langchain import LLMChain
-from langchain.prompts import PromptTemplate
-from langchain.llms import OpenAI
 
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-from templates import *
+from templates import system_prompt
 
 load_dotenv()
 
@@ -30,11 +27,3 @@ def extract_dress_info(dialogue):
     )
     result = response.choices[0].message.content
     return result
-
-
-def make_prompt(dialogue):
-    template = img_maker_prompt
-    prompt_template = PromptTemplate(input_variables=["dialogue"], template=template)
-    chain = LLMChain(prompt=prompt_template, llm=OpenAI(model="solar-1-mini-chat"))
-    response = chain.run(dialogue=dialogue)
-    return response
