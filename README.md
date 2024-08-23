@@ -54,9 +54,11 @@ output :
 1. 이미지 생성의 input으로 넣을 prompt 생성 : <br>
 - input : 전체 대화<br>
 - output :<br>
+
 ```text
 A front view of a bridal dress in a slightly ivory tone with a glossy mikado silk texture. The dress features an off-shoulder design with a slightly slimmer A-line shape that falls gracefully to the floor. The dress has a fitted bodice with a cinched waist, accentuating the bride's figure. The skirt is full and flared, with a small train at the back. The dress has a simple, elegant design, with a subtle pattern of small, 촘촘히 박혀있는 비즈. The dress is paired with a veil that is held up by a headpiece, adding a touch of elegance to the overall look. No human figure included. Sketch style, black and white line art.
 ```
+
 2. 프롬프트(위의 output)를 바탕으로 이미지 생성<br>
 - 결과 :
 ![img](https://fal.media/files/lion/VxlsjwZ0g1iw8Q-YKFN-C.png)
