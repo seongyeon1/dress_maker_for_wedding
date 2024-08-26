@@ -4,7 +4,7 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-from templates import system_prompt
+from ..templates.template import system_prompt
 
 load_dotenv()
 

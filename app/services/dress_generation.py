@@ -7,7 +7,7 @@ import fal_client
 import os
 from dotenv import load_dotenv
 
-from templates import img_maker_prompt
+from ..templates.template import image_prompt as img_maker_prompt
 
 load_dotenv()
 
