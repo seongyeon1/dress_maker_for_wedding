@@ -4,9 +4,9 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-from ..templates.template import system_prompt
-
 load_dotenv()
+
+from .templates.template import system_prompt
 
 UPSTAGE_API_KEY = os.getenv('UPSTAGE_API_KEY')
 
